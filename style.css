@@ -5,7 +5,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* video ekranın içine sığar */
+  background-color: #000; /* boş kenarlar siyah görünür */
   z-index: -1;
 }
 
@@ -30,6 +31,7 @@ body {
   max-width: 90%; /* mobilde taşmaması için */
 }
 
+
 /* Yazılar beyaz */
 #quote {
   font-size: 22px; /* mobilde biraz daha küçük */
@@ -41,7 +43,7 @@ body {
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background: #cc0000;
+  background: #ff0000;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -54,6 +56,11 @@ button:hover {
 
 /* Mobil uyum */
 @media (max-width: 600px) {
+  #bgVideo {
+    object-fit: contain; /* mobilde tam sığdır */
+    max-height: 100vh;
+    max-width: 100vw;
+  }
   #quote {
     font-size: 18px;
   }

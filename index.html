@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Ataturk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,16 +12,26 @@
     <source src="videoplayback.mp4" type="video/mp4">
     Tarayıcınız video etiketini desteklemiyor.
   </video>
-  
-  <!-- Blur alanları (mobilde aktif olacak) -->
-  <div class="top-blur"></div>
-  <div class="bottom-blur"></div>
+
+  <!-- Blur alanlar (mobilde aktif) -->
+  <div class="top-blur">
+    <video autoplay muted loop>
+      <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="bottom-blur">
+    <video autoplay muted loop>
+      <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <!-- Söz kutusu -->
   <div class="quote-box">
-    <div id="quote">Başlamak için butona bas!</div>
-    <button id="newBtn">Yeni Alıntı</button>
+    <div id="quote">Söz için butona bas!</div>
+    <button id="newBtn">Yeni Söz</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

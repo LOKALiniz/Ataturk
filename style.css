@@ -1,16 +1,16 @@
-/* Video arka plan */
+/* Arka plan video */
 #bgVideo {
   position: fixed;
   top: 0;
   left: 0;
-  width: 1000vw;
-  height: 113vh;
-  object-fit: contain;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   background-color: #000;
-  z-index: -2;
+  z-index: -3;
 }
 
-/* Genel siyah tema */
+/* Genel tema */
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +19,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: #000;
+  overflow: hidden;
 }
 
 /* Söz kutusu */
@@ -30,6 +31,7 @@ body {
   text-align: center;
   max-width: 90%;
   z-index: 1;
+  position: relative;
 }
 
 #quote {
@@ -52,7 +54,7 @@ button:hover {
   background: #cc0000;
 }
 
-/* Blur sadece mobilde aktif */
+/* Mobilde blur uzantılı video */
 @media (max-width: 600px) {
   .top-blur, .bottom-blur {
     position: fixed;
@@ -60,7 +62,7 @@ button:hover {
     width: 100%;
     height: 80px;
     overflow: hidden;
-    z-index: -1;
+    z-index: -2;
   }
 
   .top-blur {
@@ -75,14 +77,15 @@ button:hover {
   .bottom-blur video {
     width: 100vw;
     height: 100vh;
-    object-fit: contain;
+    object-fit: cover;
     filter: blur(20px);
     transform: scaleY(1.1);
     opacity: 0.5;
+    pointer-events: none;
   }
 }
 
-/* PC'de blur alanları tamamen gizle */
+/* Bilgisayarda blur alanları gizle */
 @media (min-width: 601px) {
   .top-blur,
   .bottom-blur {

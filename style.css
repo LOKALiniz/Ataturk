@@ -1,11 +1,11 @@
-/* Arka plan video */
+/* Ana video: ekrana sığdır, ortada dikdörtgen */
 #bgVideo {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 100vw;
   height: 100vh;
-  object-fit: cover; /* yanlara tam sığsın */
+  object-fit: contain; /* ekrana sığdır */
   transform: translate(-50%, -50%);
   background-color: #000;
   z-index: -3;
@@ -55,7 +55,7 @@ button:hover {
   background: #cc0000;
 }
 
-/* Mobilde blur uzantılı video */
+/* Blur alanları sadece mobilde */
 @media (max-width: 600px) {
   .top-blur, .bottom-blur {
     position: fixed;
@@ -75,13 +75,12 @@ button:hover {
     height: 100vh;
     object-fit: cover; /* blur alanı doldursun */
     filter: blur(20px);
-    transform: scaleY(1.1);
-    opacity: 0.5;
+    opacity: 0.6;
     pointer-events: none;
   }
 }
 
-/* PC'de blur alanları gizle */
+/* PC'de blur gizle */
 @media (min-width: 601px) {
   .top-blur,
   .bottom-blur {

@@ -1,11 +1,11 @@
-/* Ana video: ekrana sığdır, ortada dikdörtgen */
+/* Ana video */
 #bgVideo {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 100vw;
   height: 100vh;
-  object-fit: contain; /* ekrana sığdır */
+  object-fit: cover; /* PC’de tam ekran */
   transform: translate(-50%, -50%);
   background-color: #000;
   z-index: -3;
@@ -55,8 +55,12 @@ button:hover {
   background: #cc0000;
 }
 
-/* Blur alanları sadece mobilde */
+/* Mobilde video küçült + blur alanları aktif */
 @media (max-width: 600px) {
+  #bgVideo {
+    object-fit: contain; /* videonun tamamı görünsün */
+  }
+
   .top-blur, .bottom-blur {
     position: fixed;
     left: 0;
@@ -80,7 +84,7 @@ button:hover {
   }
 }
 
-/* PC'de blur gizle */
+/* PC’de blur gizle */
 @media (min-width: 601px) {
   .top-blur,
   .bottom-blur {

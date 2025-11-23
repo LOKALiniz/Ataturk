@@ -1,11 +1,12 @@
 /* Arka plan video */
 #bgVideo {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: cover; /* yanlara tam sığsın */
+  transform: translate(-50%, -50%);
   background-color: #000;
   z-index: -3;
 }
@@ -65,19 +66,14 @@ button:hover {
     z-index: -2;
   }
 
-  .top-blur {
-    top: 0;
-  }
-
-  .bottom-blur {
-    bottom: 0;
-  }
+  .top-blur { top: 0; }
+  .bottom-blur { bottom: 0; }
 
   .top-blur video,
   .bottom-blur video {
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    object-fit: cover; /* blur alanı doldursun */
     filter: blur(20px);
     transform: scaleY(1.1);
     opacity: 0.5;
@@ -85,7 +81,7 @@ button:hover {
   }
 }
 
-/* Bilgisayarda blur alanları gizle */
+/* PC'de blur alanları gizle */
 @media (min-width: 601px) {
   .top-blur,
   .bottom-blur {

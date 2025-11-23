@@ -76,7 +76,7 @@ button:hover {
   .top-blur video,
   .bottom-blur video {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     object-fit: cover; /* blur alanı doldursun */
     filter: blur(20px);
     opacity: 0.6;

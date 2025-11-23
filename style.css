@@ -10,30 +10,6 @@
   z-index: -2;
 }
 
-/* Üst blur alan */
-.top-blur {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
-/* Alt blur alan */
-.bottom-blur {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: -1;
-}
-
 /* Genel siyah tema */
 body {
   margin: 0;
@@ -43,28 +19,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
-  
-/* Söz kutusu: siyah şeffaf */
+  background-color: #000000;
+}
+
+/* Söz kutusu */
 .quote-box {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  max-width: 90%; /* mobilde taşmaması için */
+  max-width: 90%;
 }
-/* Yazılar beyaz */
+
 #quote {
-  font-size: 22px; /* mobilde biraz daha küçük */
+  font-size: 18px;
   color: #ff0000;
   margin-bottom: 15px;
 }
 
-/* Buton kırmızı */
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background: #cc0000;
+  background: #ff0000;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -73,4 +49,19 @@ button {
 
 button:hover {
   background: #cc0000;
+}
+
+/* Blur sadece mobilde */
+@media (max-width: 600px) {
+  .top-blur, .bottom-blur {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+  }
+  .top-blur { top: 0; }
+  .bottom-blur { bottom: 0; }
 }

@@ -3,7 +3,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 120vw;
+  width: 110vw;
   height: 100vh;
   object-fit: cover; /* PC’de tam ekran */
   transform: translate(-50%, -50%);
@@ -65,7 +65,7 @@ button:hover {
     position: fixed;
     left: 0;
     width: 100%;
-    height: 110px;
+    height: 130px;
     overflow: hidden;
     z-index: -2;
   }
@@ -76,7 +76,7 @@ button:hover {
   .top-blur video,
   .bottom-blur video {
     width: 100vw;
-    height: 110vh;
+    height: 130vh;
     object-fit: cover; /* blur alanı doldursun */
     filter: blur(20px);
     opacity: 0.6;
